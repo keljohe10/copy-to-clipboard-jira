@@ -1,0 +1,17 @@
+{
+  "name": "jira-issue-panel-custom-ui",
+  "version": "1.0.3",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "scripts": {
+    "deploy": "cd static/copy-to-clipboard && npm run build && cd ../.. && forge deploy"
+  },
+  "dependencies": {
+    "@forge/resolver": "^1.4.4"
+  }
+}

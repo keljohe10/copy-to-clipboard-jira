@@ -1,0 +1,26 @@
+modules:
+  jira:issuePanel:
+    - key: copy-to-clipboard-hello-world-panel
+      resource: main
+      resolver:
+        function: resolver
+      viewportSize: medium
+      title: Copy issue title
+      icon: https://developer.atlassian.com/platform/forge/images/issue-panel-icon.svg
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/copy-to-clipboard/build
+app:
+  id: ari:cloud:ecosystem::app/11c217af-395a-49a4-8c69-e85e8c3adc77
+permissions:
+  scopes:
+    - "write:jira-work"
+    - "read:jira-work"
+  content:
+    styles:
+      - "unsafe-inline"
+    scripts:
+      - "unsafe-inline"
